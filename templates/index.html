@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="post" action="{{url_for('results')}}">
+    <table class="table">
+      <tbody>
+        <tr> </tr>
+        <tr> </tr>
+        <tr> </tr>
+        <tr> </tr>
+        <tr> </tr>
+        <tr> </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td><b>Input 1</b></td>
+          <td><input type="text" class="form-control" id="input1" name="input1" style="max-width: 256px;" pattern="^[-]*[0-9]*$" title="Input 1" size="5"></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td><b>Operation</b></td>
+          <td>
+            <select id="operation" name="operation" class="btn btn-secondary dropdown-toggle">
+              <option value="+">+</option>
+              <option value="-">-</option>
+              <option value="*">*</option>
+              <option value="/">/</option>
+              <option value="%">%</option>
+              <option value="^">^</option>
+              <option value="~">~</option>
+            </select>
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td><b>Input 2</b></td>
+          <td><input type="text" class="form-control" id="input2" name="input2" style="max-width: 256px;" pattern="^[-]*[0-9]*$" title="Input 2" size="5"></td>
+          <td></td>
+        </tr>         
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><button type="submit" class="btn btn-primary btn-lg px-4 gap-3">Results</button></td>
+          <td></td>
+        </tr>
+      
+      </tbody>
+    </table>
+</form>
+{% endblock %}
